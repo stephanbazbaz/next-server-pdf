@@ -1,9 +1,11 @@
 import puppeteer from 'puppeteer';
 
 export default async function handler(req, res) {
+  const { id } = req.query
+  console.log(id);
   await printPDF()
 
-  res.status(200).json({ name: 'John Doe' })
+  res.status(200).json({ success: true })
 }
 async function printPDF() {
   const browser = await puppeteer.launch({ headless: true });
