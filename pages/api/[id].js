@@ -13,7 +13,7 @@ async function printPDF(id) {
   await page.emulateMediaType('screen');
   const pdf = await page.pdf({
     format: 'A4',
-    path: '/home/stephan/Desktop/result.pdf',
+    path: '/home/stephan/Desktop/newresult.pdf',
     printBackground: true,
   });
 
